@@ -1,6 +1,6 @@
 # AlignButton
-iOS开发中，`UIButton`是很常用的控件，经常会碰到图片和文字结合的情况，系统默认的是图片在左，文字在右，并且中间间距很小，并不能满足我们的需要，于是自己封装了一个`AlignButton`控件，只需要指定`alignType`和`padding`就能控制图片和文字的位置和间距，关键代码如下：
-``` 
+iOS开发中，`UIButton`是很常用的控件，经常会碰到图片和文字结合的情况，系统默认的是图片在左，文字在右，并且中间间距很小，并不能满足我们的需要，于是封装了一个`AlignButton`控件，只需要指定`alignType`和`padding`就能控制图片和文字的位置和间距，关键代码如下：
+``` objective-c
 // left、right、top、bottom指的是title的位置
 typedef NS_ENUM(NSInteger,AlignType)
 {
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger,AlignType)
 @end
 ```
 使用：导入头文件：#import "AlignButton.h"
-```
+```objective-c
 #import "AlignButton.h"
 
 @interface ViewController ()
