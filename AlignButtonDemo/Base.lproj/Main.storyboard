@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMk-ic-OFO" userLabel="RightTitleBtn" customClass="AlignButton">
+                                <rect key="frame" x="57" y="149" width="120" height="100"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fbK-eH-hbq"/>
+                                    <constraint firstAttribute="width" constant="120" id="hwT-eI-uo7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Right" image="a1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8W1-jy-n4K" userLabel="LeftTitleBtn" customClass="AlignButton">
+                                <rect key="frame" x="207" y="149" width="120" height="100"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Left" image="a1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7w-tt-7NK" userLabel="BottomTitleBtn" customClass="AlignButton">
+                                <rect key="frame" x="207" y="284" width="120" height="100"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Bottom" image="a1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y11-rO-iqY" userLabel="ImageBtn" customClass="AlignButton">
+                                <rect key="frame" x="57" y="419" width="120" height="70"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="80y-v3-OQ2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="a1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgx-5r-x7n" userLabel="TitleBtn" customClass="AlignButton">
+                                <rect key="frame" x="207" y="419" width="120" height="70"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Title"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bg-Ye-B4u" userLabel="TopTitleBtn" customClass="AlignButton">
+                                <rect key="frame" x="57" y="284" width="120" height="100"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9tI-Tc-zUt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Top" image="a1"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cgx-5r-x7n" firstAttribute="centerX" secondItem="8W1-jy-n4K" secondAttribute="centerX" id="18E-WV-Zrp"/>
+                            <constraint firstItem="y11-rO-iqY" firstAttribute="width" secondItem="oMk-ic-OFO" secondAttribute="width" id="2Cp-M8-ELh"/>
+                            <constraint firstItem="oMk-ic-OFO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-90" id="5Es-zL-y28"/>
+                            <constraint firstItem="8W1-jy-n4K" firstAttribute="height" secondItem="oMk-ic-OFO" secondAttribute="height" id="5ID-tQ-kCi"/>
+                            <constraint firstItem="y11-rO-iqY" firstAttribute="centerX" secondItem="oMk-ic-OFO" secondAttribute="centerX" id="7ap-SQ-lKY"/>
+                            <constraint firstItem="cgx-5r-x7n" firstAttribute="height" secondItem="y11-rO-iqY" secondAttribute="height" id="9ER-WI-gYa"/>
+                            <constraint firstItem="cgx-5r-x7n" firstAttribute="width" secondItem="U7w-tt-7NK" secondAttribute="width" id="AB9-Oe-63a"/>
+                            <constraint firstItem="U7w-tt-7NK" firstAttribute="height" secondItem="4bg-Ye-B4u" secondAttribute="height" id="JS9-Ep-WM1"/>
+                            <constraint firstItem="cgx-5r-x7n" firstAttribute="centerY" secondItem="y11-rO-iqY" secondAttribute="centerY" id="MVO-wa-hBF"/>
+                            <constraint firstItem="4bg-Ye-B4u" firstAttribute="top" secondItem="oMk-ic-OFO" secondAttribute="bottom" constant="35" id="QM7-fE-PJ4"/>
+                            <constraint firstItem="8W1-jy-n4K" firstAttribute="leading" secondItem="oMk-ic-OFO" secondAttribute="trailing" constant="30" id="QPy-6H-SBI"/>
+                            <constraint firstItem="U7w-tt-7NK" firstAttribute="centerY" secondItem="4bg-Ye-B4u" secondAttribute="centerY" id="Zat-wg-rQz"/>
+                            <constraint firstItem="U7w-tt-7NK" firstAttribute="centerX" secondItem="8W1-jy-n4K" secondAttribute="centerX" id="bO7-Ey-nVg"/>
+                            <constraint firstItem="y11-rO-iqY" firstAttribute="top" secondItem="4bg-Ye-B4u" secondAttribute="bottom" constant="35" id="hmj-J0-9yN"/>
+                            <constraint firstItem="U7w-tt-7NK" firstAttribute="width" secondItem="4bg-Ye-B4u" secondAttribute="width" id="j9t-od-jKT"/>
+                            <constraint firstItem="8W1-jy-n4K" firstAttribute="width" secondItem="oMk-ic-OFO" secondAttribute="width" id="jwx-lI-Ihm"/>
+                            <constraint firstItem="oMk-ic-OFO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="kv8-c0-V3l"/>
+                            <constraint firstItem="8W1-jy-n4K" firstAttribute="centerY" secondItem="oMk-ic-OFO" secondAttribute="centerY" id="lh7-H4-MvL"/>
+                            <constraint firstItem="4bg-Ye-B4u" firstAttribute="centerX" secondItem="oMk-ic-OFO" secondAttribute="centerX" id="t0p-bJ-qYi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomBtn" destination="U7w-tt-7NK" id="bag-Vp-c3d"/>
+                        <outlet property="imageBtn" destination="y11-rO-iqY" id="hGn-72-iYu"/>
+                        <outlet property="leftBtn" destination="8W1-jy-n4K" id="CBh-co-jH3"/>
+                        <outlet property="rightBtn" destination="oMk-ic-OFO" id="lhe-23-TR5"/>
+                        <outlet property="titleBtn" destination="cgx-5r-x7n" id="LYp-1W-GZb"/>
+                        <outlet property="topBtn" destination="4bg-Ye-B4u" id="fnQ-34-yTM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="a1" width="60" height="59"/>
+    </resources>
+</document>
