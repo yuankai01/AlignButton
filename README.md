@@ -51,3 +51,4 @@ typedef NS_ENUM(NSInteger,AlignType)
 ```
 效果如图：
 
+![图1.jpg](https://upload-images.jianshu.io/upload_images/14783192-ace4256fb10fc6ab.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/260)
