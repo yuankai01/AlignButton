@@ -66,6 +66,7 @@ typedef NS_ENUM(NSInteger,AlignType)
 }
 ```
 **安装：**
+
 1、使用Cocoapods安装:
 ```
 platform :ios
