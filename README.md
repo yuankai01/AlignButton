@@ -110,4 +110,4 @@ pod 'AlignButton'
 ```
 效果如图：
 
-![image.png](https://upload-images.jianshu.io/upload_images/14783192-dcf62b2117da783f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://upload-images.jianshu.io/upload_images/14783192-e81af3225f567d92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
