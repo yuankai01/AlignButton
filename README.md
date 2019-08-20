@@ -65,7 +65,17 @@ typedef NS_ENUM(NSInteger,AlignType)
     }
 }
 ```
-使用：导入AlignButton类，引用头文件：#import "AlignButton.h"
+**安装：**
+1、使用Cocoapods安装:
+```
+platform :ios
+pod 'AlignButton'
+```
+2、手动安装：
+直接拷贝AlignButton文件夹（包含AlignButton.h、AlignButton.m文件）到工程项目中.
+
+**使用:** 引用头文件：#import "AlignButton.h"
+
 ```objective-c
 #import "AlignButton.h"
 
