@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMk-ic-OFO" userLabel="RightTitleBtn" customClass="AlignButton">
-                                <rect key="frame" x="57" y="149" width="120" height="100"/>
+                                <rect key="frame" x="72" y="149" width="120" height="100"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="fbK-eH-hbq"/>
@@ -29,19 +29,19 @@
                                 <state key="normal" title="Right" image="a1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8W1-jy-n4K" userLabel="LeftTitleBtn" customClass="AlignButton">
-                                <rect key="frame" x="207" y="149" width="120" height="100"/>
+                                <rect key="frame" x="222" y="149" width="120" height="100"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Left" image="a1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7w-tt-7NK" userLabel="BottomTitleBtn" customClass="AlignButton">
-                                <rect key="frame" x="207" y="284" width="120" height="100"/>
+                                <rect key="frame" x="222" y="284" width="120" height="100"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Bottom" image="a1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y11-rO-iqY" userLabel="ImageBtn" customClass="AlignButton">
-                                <rect key="frame" x="57" y="419" width="120" height="70"/>
+                                <rect key="frame" x="72" y="419" width="120" height="70"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="80y-v3-OQ2"/>
@@ -50,13 +50,13 @@
                                 <state key="normal" image="a1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgx-5r-x7n" userLabel="TitleBtn" customClass="AlignButton">
-                                <rect key="frame" x="207" y="419" width="120" height="70"/>
+                                <rect key="frame" x="222" y="419" width="120" height="70"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Title"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bg-Ye-B4u" userLabel="TopTitleBtn" customClass="AlignButton">
-                                <rect key="frame" x="57" y="284" width="120" height="100"/>
+                                <rect key="frame" x="72" y="284" width="120" height="100"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9tI-Tc-zUt"/>
@@ -69,7 +69,7 @@
                         <constraints>
                             <constraint firstItem="cgx-5r-x7n" firstAttribute="centerX" secondItem="8W1-jy-n4K" secondAttribute="centerX" id="18E-WV-Zrp"/>
                             <constraint firstItem="y11-rO-iqY" firstAttribute="width" secondItem="oMk-ic-OFO" secondAttribute="width" id="2Cp-M8-ELh"/>
-                            <constraint firstItem="oMk-ic-OFO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-90" id="5Es-zL-y28"/>
+                            <constraint firstItem="oMk-ic-OFO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-75" id="5Es-zL-y28"/>
                             <constraint firstItem="8W1-jy-n4K" firstAttribute="height" secondItem="oMk-ic-OFO" secondAttribute="height" id="5ID-tQ-kCi"/>
                             <constraint firstItem="y11-rO-iqY" firstAttribute="centerX" secondItem="oMk-ic-OFO" secondAttribute="centerX" id="7ap-SQ-lKY"/>
                             <constraint firstItem="cgx-5r-x7n" firstAttribute="height" secondItem="y11-rO-iqY" secondAttribute="height" id="9ER-WI-gYa"/>
@@ -103,6 +103,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="a1" width="60" height="59"/>
+        <image name="a1" width="60" height="60"/>
     </resources>
 </document>
