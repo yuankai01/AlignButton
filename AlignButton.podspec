@@ -8,7 +8,7 @@ s.description  = <<-DESC
                 DESC
 s.homepage     = "https://github.com/yuankai01/AlignButton"
 s.license          = { :type => "MIT", :file => "LICENSE" }
-s.author       = { "yuankai01" => "735285388@qq.com" }
+s.author       = { "gaohuifeng" => "735285388@qq.com" }
 s.platform     = :ios, "8.0"
 s.source       = { :git => "https://github.com/yuankai01/AlignButton.git", :tag => s.version }
 s.source_files = "AlignButton/*"
