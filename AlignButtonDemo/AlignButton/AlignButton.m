@@ -10,11 +10,37 @@
 
 @implementation AlignButton
 
++ (void)load
+{
+    
+}
+
+//根据当前语言是否包含ar判断是RTL(RightToLeft)还是LTR(LeftToRight)是否要重右到左布局
++ (BOOL)isRTLLayout{
+    NSString *language = [[self class] getCurrentLanguage];
+    if([language isEqualToString:@"ar"] || [language isEqualToString:@"he"]){
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
+//获取当前系统语言
++(NSString *)getCurrentLanguage
+{
+    //本地化所有语言
+    NSArray *languages = [NSLocale preferredLanguages];
+    if (languages.count > 0) {
+        NSString *currentLanguage = [languages objectAtIndex:0];
+        //        NSLog(@"currentLanguage --==%@",currentLanguage);
+        return currentLanguage;
+    }else return nil;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
         [self initSet];
     }
     

@@ -25,6 +25,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    [UIView appearance].semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
+//    [UISearchBar appearance].semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
+//    self.navigationController.navigationBar.semanticContentAttribute = [UIView appearance].semanticContentAttribute;
+    if (@available(iOS 10.0, *)) {
+        NSLog(@"---==%ld---%ld--==%ld",[UIView userInterfaceLayoutDirectionForSemanticContentAttribute:self.view.semanticContentAttribute],[[UIApplication sharedApplication] userInterfaceLayoutDirection],self.view.effectiveUserInterfaceLayoutDirection);
+    } else {
+        // Fallback on earlier versions
+    }
+    
+    [self getCurrentLanguage];
+}
+
+- (NSString *)getCurrentLanguage
+{
+    NSArray *languages = [NSLocale preferredLanguages];
+    if (languages.count > 0) {
+        NSString *currentLanguage = [languages objectAtIndex:0];
+//        NSLog(@"currentLanguage --==%@",currentLanguage);
+        return currentLanguage;
+    }else return nil;
 }
 
 - (void)viewDidLayoutSubviews
