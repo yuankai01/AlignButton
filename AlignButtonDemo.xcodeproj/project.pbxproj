@@ -13,7 +13,7 @@
 		9BAB888522EEFF1400758C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB888422EEFF1400758C16 /* Assets.xcassets */; };
 		9BAB888822EEFF1400758C16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB888622EEFF1400758C16 /* LaunchScreen.storyboard */; };
 		9BAB888B22EEFF1400758C16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB888A22EEFF1400758C16 /* main.m */; };
-		9BAB889422EEFF5700758C16 /* AlignButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB889322EEFF5700758C16 /* AlignButton.m */; };
+		9BB59A5B23211A1E0042EC5F /* AlignButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB59A5A23211A1E0042EC5F /* AlignButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		9BAB888722EEFF1400758C16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BAB888922EEFF1400758C16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BAB888A22EEFF1400758C16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9BAB889222EEFF5700758C16 /* AlignButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignButton.h; sourceTree = "<group>"; };
-		9BAB889322EEFF5700758C16 /* AlignButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignButton.m; sourceTree = "<group>"; };
+		9BB59A5923211A1E0042EC5F /* AlignButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignButton.h; sourceTree = "<group>"; };
+		9BB59A5A23211A1E0042EC5F /* AlignButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 		9BAB887A22EEFF1300758C16 /* AlignButtonDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9BAB889122EEFF5700758C16 /* AlignButton */,
+				9BB59A5823211A1E0042EC5F /* AlignButton */,
 				9BAB887B22EEFF1300758C16 /* AppDelegate.h */,
 				9BAB887C22EEFF1300758C16 /* AppDelegate.m */,
 				9BAB887E22EEFF1300758C16 /* ViewController.h */,
@@ -81,14 +81,14 @@
 			path = AlignButtonDemo;
 			sourceTree = "<group>";
 		};
-		9BAB889122EEFF5700758C16 /* AlignButton */ = {
+		9BB59A5823211A1E0042EC5F /* AlignButton */ = {
 			isa = PBXGroup;
 			children = (
-				9BAB889222EEFF5700758C16 /* AlignButton.h */,
-				9BAB889322EEFF5700758C16 /* AlignButton.m */,
+				9BB59A5923211A1E0042EC5F /* AlignButton.h */,
+				9BB59A5A23211A1E0042EC5F /* AlignButton.m */,
 			);
 			path = AlignButton;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -165,7 +165,7 @@
 				9BAB888022EEFF1300758C16 /* ViewController.m in Sources */,
 				9BAB888B22EEFF1400758C16 /* main.m in Sources */,
 				9BAB887D22EEFF1300758C16 /* AppDelegate.m in Sources */,
-				9BAB889422EEFF5700758C16 /* AlignButton.m in Sources */,
+				9BB59A5B23211A1E0042EC5F /* AlignButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
