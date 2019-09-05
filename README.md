@@ -111,11 +111,12 @@ pod 'AlignButton'
 效果如图：
 
 ![image.png](https://upload-images.jianshu.io/upload_images/14783192-e81af3225f567d92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-**RTL布局：**做国际化语言适配时，可能会遇到`RTL（RightToLeft）`布局的情况，大部分国家语言读取都是从左向右`LTR（LeftToRight）`，但有些国家的语言读取是从右向左RTL读取的，如阿拉伯语。
+**RTL布局：** 做国际化语言适配时，可能会遇到`RTL（RightToLeft）`布局的情况，大部分国家语言读取都是从左向右`LTR（LeftToRight）`，但有些国家的语言读取是从右向左RTL读取的，如阿拉伯语。
 解决思路：判断是否需要RTL布局，`hook UIButton`的方法`setImageEdgeInsets:`和`setTitleEdgeInsets:`来达到RTL重新布局的效果：
+
 ![image.png](https://upload-images.jianshu.io/upload_images/14783192-f641ce6a86ebdec8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-**遗留问题：**RTL布局下图片镜像翻转不变，不知道为什么？有懂得朋友可以留言指教下。
+**遗留问题：** RTL布局下图片镜像翻转不变，不知道为什么？有懂得朋友可以留言指教下。
 ```
  UIImage *oriImg = [UIImage imageNamed:@"a2"];
     UIImage *image = [UIImage imageWithCGImage:oriImg.CGImage
