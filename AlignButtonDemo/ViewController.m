@@ -26,24 +26,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [UIView appearance].semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
-//    [UISearchBar appearance].semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
+//    [UIView appearance].semanticContentAttribute = UIUserInterfaceLayoutDirectionLeftToRight;
+//    [UISearchBar appearance].semanticContentAttribute = UIUserInterfaceLayoutDirectionLeftToRight;
 //    self.navigationController.navigationBar.semanticContentAttribute = [UIView appearance].semanticContentAttribute;
     
     //本地添加了RTL语言后，打印出的才是RightToLeft，否则是LeftToRight
     NSLog(@"---==%ld---%ld--==%ld",[UIView userInterfaceLayoutDirectionForSemanticContentAttribute:self.view.semanticContentAttribute],[[UIApplication sharedApplication] userInterfaceLayoutDirection],self.view.effectiveUserInterfaceLayoutDirection);
     
-//    [self getCurrentLanguage];
-}
-
-- (NSString *)getCurrentLanguage
-{
-    NSArray *languages = [NSLocale preferredLanguages];
-    if (languages.count > 0) {
-        NSLog(@"languages --==%@",languages);
-        NSString *currentLanguage = [languages objectAtIndex:0];
-        return currentLanguage;
-    }else return nil;
+    
+    UIImage *oriImg = [UIImage imageNamed:@"a2"];
+    UIImage *image = [UIImage imageWithCGImage:oriImg.CGImage
+                                         scale:oriImg.scale
+                                   orientation:UIImageOrientationRight];
+    
+    UIImage *image3 = [oriImg imageFlippedForRightToLeftLayoutDirection];
+    
+    NSLog(@"");
+    
 }
 
 - (void)viewDidLayoutSubviews
@@ -51,7 +50,13 @@
     [super viewDidLayoutSubviews];
     
     self.rightBtn.alignType = AlignType_Right;
-    self.rightBtn.padding = 0;
+    self.rightBtn.padding = 10;
+    
+    self.rightBtn.imageView.backgroundColor =  [UIColor cyanColor];
+    self.rightBtn.titleLabel.backgroundColor =  [UIColor redColor];
+
+    self.leftBtn.imageView.backgroundColor =  [UIColor cyanColor];
+    self.leftBtn.titleLabel.backgroundColor =  [UIColor redColor];
     
     self.leftBtn.alignType = AlignType_Left;
     self.leftBtn.padding = 10;

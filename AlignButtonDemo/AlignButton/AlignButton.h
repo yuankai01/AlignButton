@@ -23,9 +23,6 @@ typedef NS_ENUM(NSInteger,AlignType)
 @property (nonatomic,assign) AlignType alignType;   //文字title所在位置
 @property (assign, nonatomic) CGFloat padding;      //图片和文字间距
 
-//判断是否需要RTL布局
-- (BOOL)isRTLLayout;
-
 @end
 
 NS_ASSUME_NONNULL_END

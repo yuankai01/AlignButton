@@ -17,6 +17,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9BA0378B2320BEE800BA8EF4 /* ar-ER */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-ER"; path = "ar-ER.lproj/Main.strings"; sourceTree = "<group>"; };
+		9BA0378C2320BEE900BA8EF4 /* ar-ER */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-ER"; path = "ar-ER.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		9BA0378E2320DC0500BA8EF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		9BA037902320DC4D00BA8EF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9BA037912320E10300BA8EF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		9BA037922320E10300BA8EF4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		9BAB887822EEFF1300758C16 /* AlignButtonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlignButtonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAB887B22EEFF1300758C16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9BAB887C22EEFF1300758C16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -125,6 +131,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"ar-ER",
+				"zh-Hans",
 			);
 			mainGroup = 9BAB886F22EEFF1300758C16;
 			productRefGroup = 9BAB887922EEFF1300758C16 /* Products */;
@@ -168,6 +176,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				9BAB888222EEFF1300758C16 /* Base */,
+				9BA0378B2320BEE800BA8EF4 /* ar-ER */,
+				9BA0378E2320DC0500BA8EF4 /* en */,
+				9BA037912320E10300BA8EF4 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -176,6 +187,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				9BAB888722EEFF1400758C16 /* Base */,
+				9BA0378C2320BEE900BA8EF4 /* ar-ER */,
+				9BA037902320DC4D00BA8EF4 /* en */,
+				9BA037922320E10300BA8EF4 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -187,6 +201,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -246,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -302,7 +318,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AlignButtonDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,7 +337,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AlignButtonDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

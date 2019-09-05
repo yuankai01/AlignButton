@@ -19,29 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMk-ic-OFO" userLabel="RightTitleBtn" customClass="AlignButton">
-                                <rect key="frame" x="72" y="149" width="120" height="100"/>
+                                <rect key="frame" x="72" y="149" width="130" height="100"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="fbK-eH-hbq"/>
-                                    <constraint firstAttribute="width" constant="120" id="hwT-eI-uo7"/>
+                                    <constraint firstAttribute="width" constant="130" id="hwT-eI-uo7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Right" image="a1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8W1-jy-n4K" userLabel="LeftTitleBtn" customClass="AlignButton">
-                                <rect key="frame" x="222" y="149" width="120" height="100"/>
+                                <rect key="frame" x="232" y="149" width="130" height="100"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Left" image="a1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7w-tt-7NK" userLabel="BottomTitleBtn" customClass="AlignButton">
-                                <rect key="frame" x="222" y="284" width="120" height="100"/>
+                                <rect key="frame" x="237" y="284" width="120" height="100"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Bottom" image="a1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y11-rO-iqY" userLabel="ImageBtn" customClass="AlignButton">
-                                <rect key="frame" x="72" y="419" width="120" height="70"/>
+                                <rect key="frame" x="72" y="419" width="130" height="70"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="80y-v3-OQ2"/>
@@ -50,13 +50,13 @@
                                 <state key="normal" image="a1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgx-5r-x7n" userLabel="TitleBtn" customClass="AlignButton">
-                                <rect key="frame" x="222" y="419" width="120" height="70"/>
+                                <rect key="frame" x="237" y="419" width="120" height="70"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Title"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bg-Ye-B4u" userLabel="TopTitleBtn" customClass="AlignButton">
-                                <rect key="frame" x="72" y="284" width="120" height="100"/>
+                                <rect key="frame" x="77" y="284" width="120" height="100"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9tI-Tc-zUt"/>
