@@ -64,6 +64,43 @@ typedef NS_ENUM(NSInteger,AlignType)
             break;
     }
 }
+
+void RTLMethodSwizzling (id obj,SEL oriMethod,SEL newMethod){
+    Method ori = class_getInstanceMethod([obj class], oriMethod);
+    Method new = class_getInstanceMethod([obj class], newMethod);
+    method_exchangeImplementations(ori, new);
+}
+
+//RTL布局：hook方法setImageEdgeInsets:和setTitleEdgeInsets:
++ (void)load
+{
+    if (isRTL()) {
+        [AlignButton swizzlingOriMethod:@selector(setContentEdgeInsets:) newMethod:@selector(rtl_setContentEdgeInsets:)];
+
+        [AlignButton swizzlingOriMethod:@selector(setImageEdgeInsets:) newMethod:@selector(rtl_setImageEdgeInsets:)];
+
+        [AlignButton swizzlingOriMethod:@selector(setTitleEdgeInsets:) newMethod:@selector(rtl_setTitleEdgeInsets:)];
+    }
+}
+
++ (void)swizzlingOriMethod:(SEL)ori newMethod:(SEL)new
+{
+    Method originalMethod = class_getInstanceMethod([self class], ori);
+    Method newMethod = class_getInstanceMethod([self class], new);
+    method_exchangeImplementations(originalMethod, newMethod);
+}
+
+- (void)rtl_setContentEdgeInsets:(UIEdgeInsets)contentEdgeInsets {
+    [self rtl_setContentEdgeInsets:RTLEdgeInsetsWithInsets(contentEdgeInsets)];
+}
+
+- (void)rtl_setImageEdgeInsets:(UIEdgeInsets)imageEdgeInsets {
+    [self rtl_setImageEdgeInsets:RTLEdgeInsetsWithInsets(imageEdgeInsets)];
+}
+
+- (void)rtl_setTitleEdgeInsets:(UIEdgeInsets)titleEdgeInsets {
+    [self rtl_setTitleEdgeInsets:RTLEdgeInsetsWithInsets(titleEdgeInsets)];
+}
 ```
 **安装：**
 
@@ -110,8 +147,9 @@ pod 'AlignButton'
 ```
 效果如图：
 
-![image.png](https://upload-images.jianshu.io/upload_images/14783192-e81af3225f567d92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-**RTL布局：** 做国际化语言适配时，可能会遇到`RTL（RightToLeft）`布局的情况，大部分国家语言读取都是从左向右`LTR（LeftToRight）`，但有些国家的语言读取是从右向左RTL读取的，如阿拉伯语。
+![image.png](https://upload-images.jianshu.io/upload_images/14783192-e81af3225f567d92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)       
+/
+**RTL布局：**  做国际化语言适配时，可能会遇到`RTL（RightToLeft）`布局的情况，大部分国家语言读取都是从左向右`LTR（LeftToRight）`，但有些国家的语言读取是从右向左RTL读取的，如阿拉伯语。
 解决思路：判断是否需要RTL布局，`hook UIButton`的方法`setImageEdgeInsets:`和`setTitleEdgeInsets:`来达到RTL重新布局的效果：
 
 ![image.png](https://upload-images.jianshu.io/upload_images/14783192-f641ce6a86ebdec8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
