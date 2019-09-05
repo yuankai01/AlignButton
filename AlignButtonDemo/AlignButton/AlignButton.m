@@ -48,15 +48,6 @@
 {
     [super layoutSubviews];
     
-//    if (isRTL()) {
-//        UIImage *oriImg = self.imageView.image;
-//        UIImage *image = [self hts_imageFlippedForRightToLeftLayoutDirection:oriImg];
-//
-//        UIImage *image3 = [image imageFlippedForRightToLeftLayoutDirection];
-//
-//        NSLog(@"33");
-//    }
-    
     CGRect titleRect= [self titleRectForContentRect:self.bounds];
     CGRect imgRect = [self imageRectForContentRect:self.bounds];
     
@@ -133,7 +124,7 @@ void RTLMethodSwizzling (id obj,SEL oriMethod,SEL newMethod){
     method_exchangeImplementations(ori, new);
 }
 
-//hook
+//hook方法setImageEdgeInsets:和setTitleEdgeInsets:
 + (void)load
 {
     if (isRTL()) {

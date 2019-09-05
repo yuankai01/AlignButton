@@ -68,5 +68,4 @@
     self.bottomBtn.padding = 10;
 }
 
-
 @end
