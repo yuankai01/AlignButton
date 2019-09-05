@@ -29,21 +29,19 @@
 //    [UIView appearance].semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
 //    [UISearchBar appearance].semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
 //    self.navigationController.navigationBar.semanticContentAttribute = [UIView appearance].semanticContentAttribute;
-    if (@available(iOS 10.0, *)) {
-        NSLog(@"---==%ld---%ld--==%ld",[UIView userInterfaceLayoutDirectionForSemanticContentAttribute:self.view.semanticContentAttribute],[[UIApplication sharedApplication] userInterfaceLayoutDirection],self.view.effectiveUserInterfaceLayoutDirection);
-    } else {
-        // Fallback on earlier versions
-    }
     
-    [self getCurrentLanguage];
+    //本地添加了RTL语言后，打印出的才是RightToLeft，否则是LeftToRight
+    NSLog(@"---==%ld---%ld--==%ld",[UIView userInterfaceLayoutDirectionForSemanticContentAttribute:self.view.semanticContentAttribute],[[UIApplication sharedApplication] userInterfaceLayoutDirection],self.view.effectiveUserInterfaceLayoutDirection);
+    
+//    [self getCurrentLanguage];
 }
 
 - (NSString *)getCurrentLanguage
 {
     NSArray *languages = [NSLocale preferredLanguages];
     if (languages.count > 0) {
+        NSLog(@"languages --==%@",languages);
         NSString *currentLanguage = [languages objectAtIndex:0];
-//        NSLog(@"currentLanguage --==%@",currentLanguage);
         return currentLanguage;
     }else return nil;
 }
@@ -53,7 +51,7 @@
     [super viewDidLayoutSubviews];
     
     self.rightBtn.alignType = AlignType_Right;
-    self.rightBtn.padding = 10;
+    self.rightBtn.padding = 0;
     
     self.leftBtn.alignType = AlignType_Left;
     self.leftBtn.padding = 10;

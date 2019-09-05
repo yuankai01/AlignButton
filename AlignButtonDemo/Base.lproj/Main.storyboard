@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -69,7 +69,6 @@
                         <constraints>
                             <constraint firstItem="cgx-5r-x7n" firstAttribute="centerX" secondItem="8W1-jy-n4K" secondAttribute="centerX" id="18E-WV-Zrp"/>
                             <constraint firstItem="y11-rO-iqY" firstAttribute="width" secondItem="oMk-ic-OFO" secondAttribute="width" id="2Cp-M8-ELh"/>
-                            <constraint firstItem="oMk-ic-OFO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-75" id="5Es-zL-y28"/>
                             <constraint firstItem="8W1-jy-n4K" firstAttribute="height" secondItem="oMk-ic-OFO" secondAttribute="height" id="5ID-tQ-kCi"/>
                             <constraint firstItem="y11-rO-iqY" firstAttribute="centerX" secondItem="oMk-ic-OFO" secondAttribute="centerX" id="7ap-SQ-lKY"/>
                             <constraint firstItem="cgx-5r-x7n" firstAttribute="height" secondItem="y11-rO-iqY" secondAttribute="height" id="9ER-WI-gYa"/>
@@ -78,6 +77,7 @@
                             <constraint firstItem="cgx-5r-x7n" firstAttribute="centerY" secondItem="y11-rO-iqY" secondAttribute="centerY" id="MVO-wa-hBF"/>
                             <constraint firstItem="4bg-Ye-B4u" firstAttribute="top" secondItem="oMk-ic-OFO" secondAttribute="bottom" constant="35" id="QM7-fE-PJ4"/>
                             <constraint firstItem="8W1-jy-n4K" firstAttribute="leading" secondItem="oMk-ic-OFO" secondAttribute="trailing" constant="30" id="QPy-6H-SBI"/>
+                            <constraint firstItem="oMk-ic-OFO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="Z80-EK-Br6"/>
                             <constraint firstItem="U7w-tt-7NK" firstAttribute="centerY" secondItem="4bg-Ye-B4u" secondAttribute="centerY" id="Zat-wg-rQz"/>
                             <constraint firstItem="U7w-tt-7NK" firstAttribute="centerX" secondItem="8W1-jy-n4K" secondAttribute="centerX" id="bO7-Ey-nVg"/>
                             <constraint firstItem="y11-rO-iqY" firstAttribute="top" secondItem="4bg-Ye-B4u" secondAttribute="bottom" constant="35" id="hmj-J0-9yN"/>
