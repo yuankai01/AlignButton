@@ -22,14 +22,16 @@ typedef NS_ENUM(NSInteger,AlignType)
 {
     [super layoutSubviews];
     
-    CGRect titleRect= [self titleRectForContentRect:self.frame];
-    CGRect imgRect = [self imageRectForContentRect:self.frame];
+    CGRect titleRect= [self titleRectForContentRect:self.bounds];
+    CGRect imgRect = [self imageRectForContentRect:self.bounds];
     
     switch (self.alignType) {
         case AlignType_Right: //字体居右，图片居左
         {
             [self setImageEdgeInsets:UIEdgeInsetsMake(0, -self.padding, 0, 0)];
             [self setTitleEdgeInsets:UIEdgeInsetsMake(0, self.padding, 0, 0)];
+            
+            //针对RTL的情况，当然也可以判断isRTL，重新计算frame
         }
             break;
         case AlignType_Left:    //文字居左，图片居右边
@@ -62,6 +64,14 @@ typedef NS_ENUM(NSInteger,AlignType)
             break;
         default:
             break;
+    }
+    
+    /* <#注释#>
+     Note: that doesn’t actually flip the UIImage, but instead configures the image to be drawn flipped when it’s placed inside a UIImageView.
+     注意：图片并没有翻转，当放置到imageView的时候image才会被翻转
+     */
+    if (isRTL()) {
+        self.imageView.image = [self.imageView.image imageFlippedForRightToLeftLayoutDirection];
     }
 }
 
