@@ -30,19 +30,37 @@
 //    [UISearchBar appearance].semanticContentAttribute = UIUserInterfaceLayoutDirectionLeftToRight;
 //    self.navigationController.navigationBar.semanticContentAttribute = [UIView appearance].semanticContentAttribute;
     
-    //本地添加了RTL语言后，打印出的才是RightToLeft，否则是LeftToRight
+    /** 注意：
+     本地添加了RTL语言后，打印出的才是RightToLeft，否则是LeftToRight
+     添加对应的语言后，切换系统语言才会打印出来的才是RTL（1）或LTR（0），否则打印的是上次对应的记录。
+     */
     NSLog(@"---==%ld---%ld--==%ld",[UIView userInterfaceLayoutDirectionForSemanticContentAttribute:self.view.semanticContentAttribute],[[UIApplication sharedApplication] userInterfaceLayoutDirection],self.view.effectiveUserInterfaceLayoutDirection);
     
-    
+    /* <#注释#>
+     //Note: that doesn’t actually flip the UIImage, but instead configures the image to be drawn flipped when it’s placed inside a UIImageView.
+     注意：图片并没有翻转，当放置到imageView的时候image才会被翻转
+     */
     UIImage *oriImg = [UIImage imageNamed:@"a2"];
     UIImage *image = [UIImage imageWithCGImage:oriImg.CGImage
                                          scale:oriImg.scale
-                                   orientation:UIImageOrientationRight];
+                                   orientation:UIImageOrientationUpMirrored];
     
-    UIImage *image3 = [oriImg imageFlippedForRightToLeftLayoutDirection];
+    UIImage *image2 = [oriImg imageFlippedForRightToLeftLayoutDirection];
     
-    NSLog(@"");
+    UIImage *image3 = [oriImg imageWithHorizontallyFlippedOrientation];
     
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(30, 500, 120, 40)];
+    imgView.image = image;
+    
+    UIImageView *imgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(180, 500, 120, 40)];
+    imgView2.image = image2;
+    
+    UIImageView *imgView3 = [[UIImageView alloc] initWithFrame:CGRectMake(180, 560, 120, 40)];
+    imgView3.image = image3;
+    
+//    [self.view addSubview:imgView];
+//    [self.view addSubview:imgView2];
+//    [self.view addSubview:imgView3];
 }
 
 - (void)viewDidLayoutSubviews

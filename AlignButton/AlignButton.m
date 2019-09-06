@@ -91,6 +91,14 @@
         default:
             break;
     }
+    
+    /* <#注释#>
+     Note: that doesn’t actually flip the UIImage, but instead configures the image to be drawn flipped when it’s placed inside a UIImageView.
+     注意：图片并没有翻转，当放置到imageView的时候image才会被翻转
+     */
+    if (isRTL()) {
+        self.imageView.image = [self.imageView.image imageFlippedForRightToLeftLayoutDirection];
+    }
 }
 
 /** RTL布局
