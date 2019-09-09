@@ -153,13 +153,3 @@ pod 'AlignButton'
 解决思路：判断是否需要RTL布局，`hook UIButton`的方法`setImageEdgeInsets:`和`setTitleEdgeInsets:`来达到RTL重新布局的效果：
 
 ![image.png](https://upload-images.jianshu.io/upload_images/14783192-f641ce6a86ebdec8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-**遗留问题：** RTL布局下图片镜像翻转不变，不知道为什么？有懂得朋友可以留言指教下。
-```
- UIImage *oriImg = [UIImage imageNamed:@"a2"];
-    UIImage *image = [UIImage imageWithCGImage:oriImg.CGImage
-                                         scale:oriImg.scale
-                                   orientation:UIImageOrientationRight];
-    
-    UIImage *image3 = [oriImg imageFlippedForRightToLeftLayoutDirection];
-```
