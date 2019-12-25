@@ -67,7 +67,7 @@
 {
     [super viewDidLayoutSubviews];
     
-    self.rightBtn.alignType = AlignType_Right;
+    self.rightBtn.alignType = AlignType_TextRight;
     self.rightBtn.padding = 10;
     
     self.rightBtn.imageView.backgroundColor =  [UIColor cyanColor];
@@ -76,13 +76,13 @@
     self.leftBtn.imageView.backgroundColor =  [UIColor cyanColor];
     self.leftBtn.titleLabel.backgroundColor =  [UIColor redColor];
     
-    self.leftBtn.alignType = AlignType_Left;
+    self.leftBtn.alignType = AlignType_TextLeft;
     self.leftBtn.padding = 10;
     
-    self.topBtn.alignType = AlignType_Top;
+    self.topBtn.alignType = AlignType_TextTop;
     self.topBtn.padding = 10;
     
-    self.bottomBtn.alignType = AlignType_Bottom;
+    self.bottomBtn.alignType = AlignType_TextBottom;
     self.bottomBtn.padding = 10;
 }
 
