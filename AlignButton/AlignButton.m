@@ -30,14 +30,14 @@
 
 - (void)initSet
 {
-    self.padding = 5;   //默认间距5
+    self.padding = 4;   //默认间距4
 }
 
 - (CGRect)titleRectForContentRect:(CGRect)contentRect
 {
     CGRect rect = [super titleRectForContentRect:contentRect];
     
-    if (AlignType_Bottom == self.alignType || AlignType_Top == self.alignType) {
+    if (AlignType_TextBottom == self.alignType || AlignType_TextTop == self.alignType) {
         rect = CGRectMake(0, rect.origin.y, CGRectGetWidth(self.frame), rect.size.height);
     }
     
@@ -52,7 +52,7 @@
     CGRect imgRect = [self imageRectForContentRect:self.bounds];
     
     switch (self.alignType) {
-        case AlignType_Right: //字体居右，图片居左
+        case AlignType_TextRight: //字体居右，图片居左
         {
             [self setImageEdgeInsets:UIEdgeInsetsMake(0, -self.padding, 0, 0)];
             [self setTitleEdgeInsets:UIEdgeInsetsMake(0, self.padding, 0, 0)];
@@ -60,13 +60,13 @@
             //针对RTL的情况，当然也可以判断isRTL，重新计算frame
         }
             break;
-        case AlignType_Left:    //文字居左，图片居右边
+        case AlignType_TextLeft:    //文字居左，图片居右边
         {
             [self setImageEdgeInsets:UIEdgeInsetsMake(0, titleRect.size.width + self.padding, 0, -titleRect.size.width)];
             [self setTitleEdgeInsets:UIEdgeInsetsMake(0, -imgRect.size.width - self.padding, 0, imgRect.size.width)];
         }
             break;
-        case AlignType_Top:    //文字居上，图片居下
+        case AlignType_TextTop:    //文字居上，图片居下
         {
             self.titleLabel.textAlignment = NSTextAlignmentCenter;
             
@@ -77,7 +77,7 @@
             self.imageView.frame = CGRectMake((CGRectGetWidth(self.frame) - imgRect.size.width) / 2, CGRectGetMaxY(self.titleLabel.frame) + self.padding, imgRect.size.width, imgRect.size.height);
         }
             break;
-        case AlignType_Bottom:  //文字居下，图片居上
+        case AlignType_TextBottom:  //文字居下，图片居上
         {
             self.titleLabel.textAlignment = NSTextAlignmentCenter;
             

@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 // left、right、top、bottom指的是title的位置
 typedef NS_ENUM(NSInteger,AlignType)
 {
-    AlignType_Right  = 1,   //title在右边
-    AlignType_Left,         //title在左边
-    AlignType_Top,          //title在上面
-    AlignType_Bottom,       //title在下面
+    AlignType_TextRight  = 1,   //title在右边
+    AlignType_TextLeft,         //title在左边
+    AlignType_TextTop,          //title在上面
+    AlignType_TextBottom,       //title在下面
 };
 
 @interface AlignButton : UIButton
