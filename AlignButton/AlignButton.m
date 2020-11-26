@@ -30,7 +30,7 @@
 
 - (void)initSet
 {
-    self.padding = 4;   //默认间距4
+    self.padding = 2;   //默认间距
 }
 
 - (CGRect)titleRectForContentRect:(CGRect)contentRect
