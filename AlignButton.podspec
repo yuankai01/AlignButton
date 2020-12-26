@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "AlignButton"
-s.version      = "1.0"
+s.version      = "1.1"
 s.summary      = "UIButton文字和图片布局 for ios."
 s.description  = <<-DESC
         UIButton文字和图片适配上下左右布局的控件
