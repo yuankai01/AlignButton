@@ -97,7 +97,9 @@
      注意：图片并没有翻转，当放置到imageView的时候image才会被翻转
      */
     if (isRTL()) {
-        self.imageView.image = [self.imageView.image imageFlippedForRightToLeftLayoutDirection];
+        if (@available(iOS 9.0,*)) {
+            self.imageView.image = [self.imageView.image imageFlippedForRightToLeftLayoutDirection];
+        }
     }
 }
 
