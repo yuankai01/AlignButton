@@ -118,7 +118,7 @@ void RTLMethodSwizzling (id obj,SEL oriMethod,SEL newMethod){
 
 1、使用Cocoapods安装:
 ```
-platform :ios
+platform :ios, '8.0'
 pod 'AlignButton'
 ```
 2、手动安装：
