@@ -4,10 +4,10 @@ iOS开发中，`UIButton`是很常用的控件，经常会碰到图片和文字�
 // left、right、top、bottom指的是title的位置
 typedef NS_ENUM(NSInteger,AlignType)
 {
-    AlignType_Right  = 1,   //title在右边
-    AlignType_Left,         //title在左边
-    AlignType_Top,          //title在上面
-    AlignType_Bottom,       //title在下面
+    AlignType_TextRight  = 1,   //title在右边
+    AlignType_TextLeft,         //title在左边
+    AlignType_TextTop,          //title在上面
+    AlignType_TextBottom,       //title在下面
 };
 
 @interface AlignButton : UIButton
@@ -22,23 +22,25 @@ typedef NS_ENUM(NSInteger,AlignType)
 {
     [super layoutSubviews];
     
-    CGRect titleRect= [self titleRectForContentRect:self.frame];
-    CGRect imgRect = [self imageRectForContentRect:self.frame];
+    CGRect titleRect= [self titleRectForContentRect:self.bounds];
+    CGRect imgRect = [self imageRectForContentRect:self.bounds];
     
     switch (self.alignType) {
-        case AlignType_Right: //字体居右，图片居左
+        case AlignType_TextRight: //字体居右，图片居左
         {
             [self setImageEdgeInsets:UIEdgeInsetsMake(0, -self.padding, 0, 0)];
             [self setTitleEdgeInsets:UIEdgeInsetsMake(0, self.padding, 0, 0)];
+            
+            //针对RTL的情况，当然也可以判断isRTL，重新计算frame
         }
             break;
-        case AlignType_Left:    //文字居左，图片居右边
+        case AlignType_TextLeft:    //文字居左，图片居右边
         {
             [self setImageEdgeInsets:UIEdgeInsetsMake(0, titleRect.size.width + self.padding, 0, -titleRect.size.width)];
             [self setTitleEdgeInsets:UIEdgeInsetsMake(0, -imgRect.size.width - self.padding, 0, imgRect.size.width)];
         }
             break;
-        case AlignType_Top:    //文字居上，图片居下
+        case AlignType_TextTop:    //文字居上，图片居下
         {
             self.titleLabel.textAlignment = NSTextAlignmentCenter;
             
@@ -49,7 +51,7 @@ typedef NS_ENUM(NSInteger,AlignType)
             self.imageView.frame = CGRectMake((CGRectGetWidth(self.frame) - imgRect.size.width) / 2, CGRectGetMaxY(self.titleLabel.frame) + self.padding, imgRect.size.width, imgRect.size.height);
         }
             break;
-        case AlignType_Bottom:  //文字居下，图片居上
+        case AlignType_TextBottom:  //文字居下，图片居上
         {
             self.titleLabel.textAlignment = NSTextAlignmentCenter;
             
@@ -62,6 +64,16 @@ typedef NS_ENUM(NSInteger,AlignType)
             break;
         default:
             break;
+    }
+    
+    /* <#注释#>
+     Note: that doesn’t actually flip the UIImage, but instead configures the image to be drawn flipped when it’s placed inside a UIImageView.
+     注意：图片并没有翻转，当放置到imageView的时候image才会被翻转
+     */
+    if (isRTL()) {
+        if (@available(iOS 9.0,*)) {
+            self.imageView.image = [self.imageView.image imageFlippedForRightToLeftLayoutDirection];
+        }
     }
 }
 
@@ -132,16 +144,22 @@ pod 'AlignButton'
 {
     [super viewDidLayoutSubviews];
     
-    self.rightBtn.alignType = AlignType_Right;
+    self.rightBtn.alignType = AlignType_TextRight;
     self.rightBtn.padding = 10;
     
-    self.leftBtn.alignType = AlignType_Left;
+    self.rightBtn.imageView.backgroundColor =  [UIColor cyanColor];
+    self.rightBtn.titleLabel.backgroundColor =  [UIColor redColor];
+
+    self.leftBtn.imageView.backgroundColor =  [UIColor cyanColor];
+    self.leftBtn.titleLabel.backgroundColor =  [UIColor redColor];
+    
+    self.leftBtn.alignType = AlignType_TextLeft;
     self.leftBtn.padding = 10;
     
-    self.topBtn.alignType = AlignType_Top;
+    self.topBtn.alignType = AlignType_TextTop;
     self.topBtn.padding = 10;
     
-    self.bottomBtn.alignType = AlignType_Bottom;
+    self.bottomBtn.alignType = AlignType_TextBottom;
     self.bottomBtn.padding = 10;
 }
 ```
