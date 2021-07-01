@@ -1,6 +1,6 @@
 # AlignButton
 
-# 注意：
+**注意：**
 AlignType_TextRight == AlignType，存在的问题：
 1、自适应宽度时，会显示不全，所以要固定宽度 >= img.width + padding + text.width;
 2、xib定义的button，设置padding时，要在button.superview的 layoutSubviews 方法设置才会生效；
