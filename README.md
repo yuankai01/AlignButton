@@ -1,4 +1,11 @@
 # AlignButton
+
+# 注意：
+AlignType_TextRight == AlignType，存在的问题：
+1、自适应宽度时，会显示不全，所以要固定宽度 >= img.width + padding + text.width;
+2、xib定义的button，设置padding时，要在button.superview的 layoutSubviews 方法设置才会生效；
+3、titleBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft时，由于inset会导致图片越界，超出button.frame；
+
 iOS开发中，`UIButton`是很常用的控件，经常会碰到图片和文字结合的情况，系统默认的是图片在左，文字在右，并且中间间距很小，并不能满足我们的需要，于是封装了一个`AlignButton`控件，只需要指定`alignType`和`padding`就能控制图片和文字的位置和间距，关键代码如下：
 ``` objective-c
 // left、right、top、bottom指的是title的位置
